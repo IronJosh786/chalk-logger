@@ -14,10 +14,10 @@ class Logger {
     const labelStyle =
       type === "error" ? chalk.white.bgRed : chalk.white.bgBlue;
 
-    if (this.ENV === "production") {
-      console[type](label, message, formattedData);
-    } else {
+    if (this.ENV === "development") {
       console[type](labelStyle(label), messageStyle(message), formattedData);
+    } else {
+      console[type](label, message, formattedData);
     }
   }
 
