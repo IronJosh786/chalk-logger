@@ -1,5 +1,5 @@
 {
-  "name": "logger",
+  "name": "chalk-logger",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
