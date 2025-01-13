@@ -1,14 +1,4 @@
-import http from "http";
-import dotenv from "dotenv";
-import { Logger } from "./logger.js";
-
-dotenv.config();
-const log = new Logger();
-
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Hello, World!\n");
-});
+import log from "./logger.js";
 
 const data = {
   id: 1,
@@ -21,7 +11,5 @@ const data = {
   },
 };
 
-server.listen(3000, () => {
-  log.info("Server is listening on port 3000");
-  log.error("Example of error", data);
-});
+log.info("Server is listening on port 3000");
+log.error("Example of error", data);

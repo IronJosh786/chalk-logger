@@ -1,13 +1,20 @@
 import chalk from "chalk";
+import dotenv from "dotenv";
 
-export class Logger {
+dotenv.config();
+
+class Logger {
+  constructor() {
+    this.ENV = process.env.NODE_ENV || "development";
+  }
+
   log(type, label, message, data) {
     const formattedData = data ? `\n${JSON.stringify(data, null, 2)}` : "";
     const messageStyle = type === "error" ? chalk.redBright : chalk.blueBright;
     const labelStyle =
       type === "error" ? chalk.white.bgRed : chalk.white.bgBlue;
 
-    if (process.env.NODE_ENV === "production") {
+    if (this.ENV === "production") {
       console[type](label, message, formattedData);
     } else {
       console[type](labelStyle(label), messageStyle(message), formattedData);
@@ -22,3 +29,7 @@ export class Logger {
     this.log("log", "INFO:", message, data);
   }
 }
+
+const log = new Logger();
+
+export default log;
