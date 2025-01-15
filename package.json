@@ -1,6 +1,6 @@
 {
   "name": "simple-chalk-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "logger.js",
   "type": "module",
   "scripts": {
@@ -10,6 +10,7 @@
     "chalk",
     "logger",
     "chalk-logger",
+    "simple-chalk-logger",
     "nodejs-logger"
   ],
   "author": "Faizan Ejaz Shaikh",

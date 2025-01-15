@@ -1,11 +1,17 @@
-# chalk-logger
+# simple-chalk-logger
 
 A simple, lightweight development logger for Node.js using `chalk`.
+
+## Installation
+
+```bash
+npm i simple-chalk-logger;
+```
 
 ## Import
 
 ```bash
-import log from './logger';
+import log from 'simple-chalk-logger';
 ```
 
 ## Basic Usage
